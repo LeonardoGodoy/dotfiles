@@ -1,0 +1,4 @@
+alias run-basics="docker-compose up --build"
+alias run-server="docker-compose run --rm -e WEBPACKER_DEV_SERVER_HOST=host.docker.internal -p 3000:3000 app bin/rails s -b 0.0.0.0"
+alias run-webpack="docker-compose run --rm -p 3035:3035 app bin/webpack-dev-server"
+alias run-bash="docker-compose run --rm  app /bin/bash"
