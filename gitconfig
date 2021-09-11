@@ -1,0 +1,55 @@
+[alias]
+  aa = add --all
+  ca = commit --amend --verbose
+  car = commit --amend --no-edit
+  co = checkout
+  copysha = !git rev-parse HEAD | pbcopy
+  fall = fetch --all
+  glog = log -E -i --grep
+  dup = !git checkout develop && git fetch origin && echo && git sl develop..origin/develop && echo && git pull --quiet && git checkout -
+  mup = !git checkout master && git fetch origin && echo && git sl master..origin/master && echo && git pull --quiet && git checkout -
+  ob = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
+  pf = !git push origin +$(git symbolic-ref HEAD)
+  pl = pull
+  ps = push
+  rbc = rebase --continue
+  riu = !git rebase -i $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+  rid = !git rebase -i $(git merge-base develop HEAD)
+  rim = !git rebase -i $(git merge-base master HEAD)
+  rdup = !git dup && git rebase develop
+  rmup = !git mup && git rebase master
+  sl = log --oneline --decorate -20
+  sla = log --oneline --decorate --graph --all -20
+  slp = log --oneline --decorate
+  slap = log --oneline --decorate --graph --all
+  uncommit = reset --soft HEAD^
+  unstage = reset
+  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  ureset = !git reset --hard $(git upstream)
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+[push]
+  default = upstream
+[fetch]
+  prune = true
+[gitsh "color"]
+  default = cyan
+[gitsh]
+  defaultcommand = status -sb
+  gitcommand = hub
+  nogreeting = true
+  prompt = "\n%D %c(%b%#)%w ➜"
+[user]
+  name = Leonardo Godoy
+  email = leonardo.godoy.souza@gmail.com
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[diff]
+  colorMoved = zebra
