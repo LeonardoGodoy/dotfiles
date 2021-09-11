@@ -1,0 +1,13 @@
+.env
+.git/
+.DS_Store
+.bundle
+.byebug_history
+/bower_components/
+/log
+/node_modules/
+/tmp
+/vendor
+db/*.sqlite3
+log/*.log
+tmp/**/*
