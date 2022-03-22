@@ -11,6 +11,16 @@ Clone the repository in your home directory
 git clone git@github.com:LeonardoGodoy/dotfiles.git ~/dotfiles
 ```
 
+Install Vundle
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Open vim and install the plugins with
+```
+:PlugInstall
+```
+
 Execute the install script
 ```
 cd ~/dotfiles
