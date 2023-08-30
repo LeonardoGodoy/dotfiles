@@ -1,0 +1,9 @@
+# Firstleaf aliases
+
+alias sso_firstleaf='aws sso login --profile firstleaf-staging'
+alias sso_firstleaf_prod='aws sso login --profile firstleaf-production'
+
+alias ssh_firstleaf='cd $HOME/firstleaf/firstleaf-solidus && eb-ssm solidus-staging --profile firstleaf-staging'
+alias ssh_firstleaf_prod='cd $HOME/firstleaf/firstleaf-solidus && eb-ssm solidus-production --profile firstleaf-production'
+
+alias firstleaf='cd $HOME/firstleaf/firstleaf-solidus'
