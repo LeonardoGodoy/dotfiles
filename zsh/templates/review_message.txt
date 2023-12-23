@@ -1,2 +1,0 @@
-Hi there, could you help me reviewing this ticket?
-> [TASK-ID](https://firstleaf.atlassian.net/browse/FM-###) MESSAGE [#NUMBER](URL)
