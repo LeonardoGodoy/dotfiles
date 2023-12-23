@@ -11,3 +11,6 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+app/services/leo/**
+config/initializers/personal_loaders/**
+leo/**
