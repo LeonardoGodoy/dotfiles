@@ -14,6 +14,12 @@
 require 'optparse'
 require 'ostruct'
 
+DEFAULT_TEMPLATE = <<-TEMPLATE
+## [TASK-ID](https://firstleaf.atlassian.net/browse/TASK-ID)
+
+BODY
+TEMPLATE
+
 def get_current_branch
   `git rev-parse --abbrev-ref HEAD`.chomp
 end
@@ -29,12 +35,6 @@ def project_template
   return nil unless File.exists?(project_template_filename)
   File.read(project_template_filename)
 end
-
-DEFAULT_TEMPLATE = <<-TEMPLATE
-## [TASK-ID](https://firstleaf.atlassian.net/browse/TASK-ID)
-
-BODY
-TEMPLATE
 
 def exit_with(message)
   $stderr.puts(message)
@@ -133,6 +133,6 @@ command = commands.join(" ")
 puts command if options.dryrun
 system(command) if !options.dryrun
 
-system('ruby ~/dotfiles/zsh/functions/fprh.rb -r') if options.copy_heading
+system('ruby ~/dotfiles/zsh/functions/ruby/fprh.rb -r') if options.copy_heading
 
 system("gh pr view --web") if options.open
