@@ -4,6 +4,10 @@ require 'optparse'
 require 'ostruct'
 require 'json'
 
+# Feel free to modifty the messages
+ASKING_PR_REVIEW_MESSAGE = 'Hi there, could you help me reviewing this ticket?'.freeze
+COMUNICATING_DEPLOYMENT = 'Deploying solidus to *production*'.freeze
+
 def get_pr_data
   `gh pr view --json number,url,title`
 end
@@ -46,9 +50,9 @@ title_task_link = title.gsub(task_id_match[0], task_link)
 pr_link = "[##{pr.number}](#{pr.url})"
 
 message = if options.review
-  "Hi there, could you help me reviewing this ticket?"
+  ASKING_PR_REVIEW_MESSAGE
 elsif options.deploy
-  "Deploying solidus to *production*"
+  COMUNICATING_DEPLOYMENT
 else
   options.message
 end
