@@ -1,0 +1,21 @@
+root = true
+
+[*]
+indent_style = tab
+#end_of_line = crlf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_size = 4
+
+[*.{xml,config,json}]
+indent_size = 2
+
+[*.{html,erb,rb,md,psd1,pp,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# 4 space indentation
+[*.{py,java,r,R}]
+indent_style = space
+indent_size = 4
+end_of_line = crlf

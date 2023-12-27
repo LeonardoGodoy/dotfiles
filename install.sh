@@ -10,5 +10,5 @@ fi
 
 echo 'Installing dotfiles'
 
-rcup -v -d ~/dotfiles -x install.sh -x README
+rcup -v -d ~/dotfiles -x install.sh -x uninstall.sh -x README -u 'firstleaf/editorconfig' -U firstleaf
 
