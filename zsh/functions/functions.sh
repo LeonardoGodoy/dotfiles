@@ -9,6 +9,10 @@ fprh() {
   ruby ~/dotfiles/zsh/functions/ruby/fprh.rb $@
 }
 
+fprl() {
+  ruby ~/dotfiles/zsh/functions/ruby/fprh.rb $@
+}
+
 fprd() {
   ruby ~/dotfiles/zsh/functions/ruby/fprd.rb $@
 }
