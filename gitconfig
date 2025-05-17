@@ -7,7 +7,7 @@
   fall = fetch --all
   glog = log -E -i --grep
   dup = !git checkout develop && git fetch origin && echo && git sl develop..origin/develop && echo && git pull --quiet && git checkout -
-  mup = !git checkout master && git fetch origin && echo && git sl master..origin/master && echo && git pull --quiet && git checkout -
+  mup = !git checkout main && git fetch origin && echo && git sl main..origin/main && echo && git pull --quiet && git checkout -
   ob = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
   pf = !git push origin +$(git symbolic-ref HEAD)
   pl = pull
@@ -15,9 +15,9 @@
   rbc = rebase --continue
   riu = !git rebase -i $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
   rid = !git rebase -i $(git merge-base develop HEAD)
-  rim = !git rebase -i $(git merge-base master HEAD)
+  rim = !git rebase -i $(git merge-base main HEAD)
   rdup = !git dup && git rebase develop
-  rmup = !git mup && git rebase master
+  rmup = !git mup && git rebase main
   sl = log --oneline --decorate -20
   sla = log --oneline --decorate --graph --all -20
   slp = log --oneline --decorate
