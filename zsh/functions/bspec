@@ -1,0 +1,5 @@
+#!/bin/bash
+
+function bspec() {
+  bundle exec rspec "$1";
+}
