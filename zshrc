@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f ~/.zsh/firstleaf_aliases ]] && source ~/.zsh/firstleaf_aliases
 
+[[ -f ~/.zsh/highdata_aliases ]] && source ~/.zsh/highdata_aliases
+
 for function in ~/.zsh/functions/*; do
   source $function
 done

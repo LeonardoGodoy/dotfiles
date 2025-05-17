@@ -1,0 +1,4 @@
+# Highdata aliases
+
+# Highlog aliases
+alias hd='cd $HOME/highdata/highlog'
